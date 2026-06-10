@@ -20,37 +20,43 @@ def introduction():
 
 # Allows the user to select their hero's class at the start of the game.
 def character_settings():
-    hero_class = input("Please select your hero's class. \n\n" \
-                        "Classes included: \n" \
-                        "Assassin \n"
-                        "Brawler \n"
-                        "Knight \n"
-                        "Sharp-Shooter \n"
-                        "Sorcerer \n\n")
+    while True:
+
+        hero_class = input("Please select your hero's class. \n\n" \
+                            "Classes included: \n" \
+                            "Assassin \n"
+                            "Brawler \n"
+                            "Knight \n"
+                            "Sharp-Shooter \n"
+                            "Sorcerer \n\n")
 
 
-    if hero_class == "Assassin":
-        hero = Assassin()
+        if hero_class == "Assassin":
+            hero = Assassin()
+            break
 
-    elif hero_class == "Brawler":
-        hero = Brawler()
+        elif hero_class == "Brawler":
+            hero = Brawler()
+            break
 
-    elif hero_class == "Knight":
-        hero = Knight()
-    
-    elif hero_class == "Sharp-Shooter":
-        hero = SharpShooter()
-    
-    elif hero_class == "Sorcerer":
-        hero = Sorcerer()
-    
-    else:
-        print("Invalid class has been selected. Please try again!")
-        return None
+        elif hero_class == "Knight":
+            hero = Knight()
+            break
+        
+        elif hero_class == "Sharp-Shooter":
+            hero = SharpShooter()
+            break
+        
+        elif hero_class == "Sorcerer":
+            hero = Sorcerer()
+            break
+        
+        else:
+            print("Invalid class has been selected. Please try again!\n")
     
     print("You are now a(n) " + hero_class + "!")
     print()
-    print("Your stats are:")
+    print("Your initial stats are:")
     print("Attack:", hero.attack)
     print("Defense:", hero.defense)
     print("Speed:", hero.speed)
