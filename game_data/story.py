@@ -4,6 +4,7 @@ This file contains all of the story/dialogue information for the game.
 
 from hero_class import Assassin, Brawler, Knight, SharpShooter, Sorcerer
 
+# Displays the prologue of the game and allows the user to record their name of choosing.
 def introduction():
     print()
     print("A long time ago, there was once a kingdom that prospered. " \
@@ -15,6 +16,9 @@ def introduction():
     print()
     print(hero_name + "! \n")
 
+    return hero_name
+
+# Allows the user to select their hero's class at the start of the game.
 def character_settings():
     hero_class = input("Please select your hero's class. \n\n" \
                         "Classes included: \n" \
@@ -55,9 +59,25 @@ def character_settings():
 
     return hero
 
-def main():
-    introduction()
-    character_settings()
+# Displays the hero's current stats.
+def current_stats(hero_name, hero):
+    print("\n")
+    print("Hero name:", hero_name)
+    print("\n")
+    print("Hero class stats:")
+    print("Attack:", hero.attack)
+    print("Defense:", hero.defense)
+    print("Speed:", hero.speed)
+    print("Endurance:", hero.endurance)
+    print("Magic:", hero.magic)
 
+
+# Contains and runs all other functions defined in this file.
+def main():
+    hero_name = introduction()
+    hero = character_settings()
+    current_stats(hero_name, hero)
+    
+# Executes the main function to run the application.
 if __name__ == "__main__":
     main()
