@@ -70,13 +70,9 @@ def current_stats(hero_name, hero):
     print("\n")
     print("Hero Name:", hero_name)
     print("Hero Class:", hero.hero_class)
-    print("\n")
+    print()
     print("Hero Class Stats:")
-    print("Attack:", hero.attack)
-    print("Defense:", hero.defense)
-    print("Speed:", hero.speed)
-    print("Endurance:", hero.endurance)
-    print("Magic:", hero.magic)
+    hero.display_stats()
 
 
 # Contains and runs all other functions defined in this file.
