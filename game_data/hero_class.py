@@ -2,48 +2,52 @@
 The hero_class.py file contains all the operational logic and stats for the hero classes.
 """
 
-class Assassin:
+# The main class that is the overall structure for each hero class.
+class Hero:
+
+    def __init__(self, hero_class, attack, defense, speed, endurance, magic):
+        self.hero_class = hero_class
+        self.attack = attack
+        self.defense = defense
+        self.speed = speed
+        self.endurance = endurance
+        self.magic = magic
+
+    def display_stats(self):
+        print("Class:", self.hero_class)
+        print("Attack:", self.attack)
+        print("Defense:", self.defense)
+        print("Speed:", self.speed)
+        print("Endurance:", self.endurance)
+        print("Magic:", self.magic)
+
+# The Assassin Hero Class.
+class Assassin(Hero):
 
     def __init__(self):
-        self.attack = 20
-        self.defense = 10
-        self.speed = 25
-        self.endurance = 15
-        self.magic = 10
-    
-class Brawler:
+        super().__init__("Assassin", 20, 10, 25, 15, 10)
+
+# The Brawler Hero Class.   
+class Brawler(Hero):
 
     def __init__(self):
-        self.attack = 25
-        self.defense = 15
-        self.speed = 15
-        self.endurance = 20
-        self.magic = 5
+        super().__init__("Brawler", 25, 15, 15, 20, 5)
 
-class Knight:
+# The Knight Hero Class.
+class Knight(Hero):
 
     def __init__(self):
-        self.attack = 20
-        self.defense = 20
-        self.speed = 10
-        self.endurance = 15
-        self.magic = 10
+        super().__init__("Knight", 20, 20, 10, 15, 10)
 
-class SharpShooter:
+# The Sharp-Shooter Hero Class.
+class SharpShooter(Hero):
 
     def __init__(self):
-        self.attack = 15
-        self.defense = 10
-        self.speed = 20
-        self.endurance = 10
-        self.magic = 15
+        super().__init__("Sharp-Shooter", 15, 10, 20, 10, 15)
 
-class Sorcerer:
+# The Sorcerer Hero Class.
+class Sorcerer(Hero):
 
     def __init__(self):
-        self.attack = 10
-        self.defense = 15
-        self.speed = 10
-        self.endurance = 10
-        self.magic = 25
+        super().__init__("Sorcerer", 10, 15, 10, 10, 25)
 

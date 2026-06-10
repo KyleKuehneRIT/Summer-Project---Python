@@ -62,9 +62,10 @@ def character_settings():
 # Displays the hero's current stats.
 def current_stats(hero_name, hero):
     print("\n")
-    print("Hero name:", hero_name)
+    print("Hero Name:", hero_name)
+    print("Hero Class:", hero.hero_class)
     print("\n")
-    print("Hero class stats:")
+    print("Hero Class Stats:")
     print("Attack:", hero.attack)
     print("Defense:", hero.defense)
     print("Speed:", hero.speed)
